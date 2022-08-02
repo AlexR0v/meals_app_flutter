@@ -1,16 +1,8 @@
 # meals_app_flutter
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div style="display: flex; justify-content: center; gap: 30px; margin-top: 30px">
+<img src="./lib/assets/1.png" width="200"/>
+<img src="./lib/assets/2.png" width="200"/>
+<img src="./lib/assets/3.png" width="200"/>
+<img src="./lib/assets/4.png" width="200"/>
+</div>
