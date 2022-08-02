@@ -5,11 +5,48 @@ class CustomDrawer extends StatelessWidget {
     Key? key,
   }) : super(key: key);
 
+  Widget buildListTile(String title, IconData icon, Function tapHandler) {
+    return ListTile(
+      leading: Icon(
+        icon,
+        size: 26,
+      ),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontSize: 24,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      onTap: () {
+        // ...
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Theme.of(context).primaryColor,
-      child: Center(child: const Text('Drawer')),
+      child: Column(
+        children: <Widget>[
+          Container(
+            height: 120,
+            width: double.infinity,
+            padding: const EdgeInsets.all(20),
+            alignment: Alignment.centerLeft,
+            color: Theme.of(context).colorScheme.secondary,
+            child: Text(
+              'Давай готовить!',
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 30, color: Theme.of(context).primaryColor),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          buildListTile('Кухни', Icons.restaurant, () => Navigator.of(context).pushReplacementNamed('/')),
+          buildListTile('Фильтры', Icons.settings, () => Navigator.of(context).pushReplacementNamed('/')),
+        ],
+      ),
     );
   }
 }
