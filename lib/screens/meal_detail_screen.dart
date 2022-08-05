@@ -10,8 +10,10 @@ class MealDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final mealId = ModalRoute.of(context)?.settings.arguments as String;
     final selectedMeal = dummyMeals.firstWhere((meal) => meal.id == mealId);
+
     return Scaffold(
       appBar: CustomAppBar(title: selectedMeal.title),
       body: SingleChildScrollView(
